@@ -18,7 +18,7 @@ class ProfileController extends Controller
     public function update(Request $request, User $user)
     {
         $attr = $request->validate([
-            'name' => 'required',
+            'username' => 'required',
             'email' => 'required|email|unique:users,email,' . $user->id,
             'profile_image' => ['file', 'image']
         ]);

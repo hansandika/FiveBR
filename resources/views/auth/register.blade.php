@@ -1,4 +1,4 @@
-@extends('layouts.app',['title' => 'Register'])
+@extends('layouts.app', ['title' => 'Register'])
 @section('content')
     <div class="container py-5">
         <div class="row justify-content-center">
@@ -10,7 +10,7 @@
                             @csrf
                             <div class="mb-4">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control @error('name')is-invalid @enderror" name="name">
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name">
                                 @error('name')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -19,7 +19,7 @@
                             </div>
                             <div class="mb-4">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control @error('email')is-invalid @enderror" name="email">
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email">
                                 @error('email')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -28,7 +28,7 @@
                             </div>
                             <div class="mb-4">
                                 <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control @error('password')is-invalid @enderror"
+                                <input type="password" class="form-control @error('password') is-invalid @enderror"
                                     name="password">
                                 @error('password')
                                     <div class="invalid-feedback">
@@ -44,5 +44,4 @@
             </div>
         </div>
     </div>
-
 @endsection
