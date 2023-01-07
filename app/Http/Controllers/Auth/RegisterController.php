@@ -33,6 +33,6 @@ class RegisterController extends Controller
         $attr['join_date'] = Carbon::now();
         User::create($attr);
 
-        return redirect('/login');
+        return redirect('/login')->with('success', 'Register Successfully');;
     }
 }

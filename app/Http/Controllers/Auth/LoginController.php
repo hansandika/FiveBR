@@ -30,7 +30,7 @@ class LoginController extends Controller
         ]);
 
         if (Auth::attempt(['email' => request('email'), 'password' => $request->password], $request->remember)) {
-            return redirect('/');
+            return redirect('/')->with('success', 'Login Successfully');;
         }
         return redirect('/login')->with('error', 'Invalid Credential');
     }
@@ -38,6 +38,6 @@ class LoginController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect('/');
+        return redirect('/')->with('success', 'Logout Successfully');;;
     }
 }
