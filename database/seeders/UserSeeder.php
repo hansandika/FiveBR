@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
             'name' => 'william',
             'email' => 'william@mail.com',
             'password' => bcrypt('willliam02'),
-            'profile_image' =>  $faker->image('public/storage/profile-pictures', 640, 480, null, false),
+            'profile_image' =>  '71YE+qFDz5L.jpg',
             'description' => $faker->paragraph(),
             'about' => $faker->sentence(),
             'join_date' => Carbon::now()
@@ -30,7 +30,7 @@ class UserSeeder extends Seeder
             'name' => 'beni',
             'email' => 'beni@mail.com',
             'password' => bcrypt('beni02'),
-            'profile_image' =>  $faker->image('public/storage/profile-pictures', 640, 480, null, false),
+            'profile_image' => 'what-kind-of-cat-breed-is-beluga-800x450.jpg',
             'description' => $faker->paragraph(),
             'about' => $faker->sentence(),
             'join_date' => Carbon::now()
@@ -40,7 +40,7 @@ class UserSeeder extends Seeder
             'name' => 'Hans',
             'email' => 'hansandika70@gmail.com',
             'password' => bcrypt('hansgeovani2'),
-            'profile_image' =>  $faker->image('public/storage/profile-pictures', 640, 480, null, false),
+            'profile_image' =>  'cute-shiba-inu-standing-waving-hand-cartoon-vector-icon-illustration-animal-nature-icon-concept_138676-4381.webp',
             'description' => $faker->paragraph(),
             'about' => $faker->sentence(),
             'join_date' => Carbon::now()
@@ -50,7 +50,7 @@ class UserSeeder extends Seeder
             'name' => 'ryne',
             'email' => 'ryne@mail.com',
             'password' => bcrypt('ryne02'),
-            'profile_image' =>  $faker->image('public/storage/profile-pictures', 640, 480, null, false),
+            'profile_image' =>  'istockphoto-1266632962-612x612.jpg',
             'description' => $faker->paragraph(),
             'about' => $faker->sentence(),
             'join_date' => Carbon::now()
