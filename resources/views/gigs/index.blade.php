@@ -1,9 +1,9 @@
 @extends('layouts.app', ['title' => 'Home'])
 @section('content')
     <section
-        style="background-image: url('https://picsum.photos/1920');background-size:cover;background-position:center;background-repeat:no-repeat;height: 100vh;width : 100vw"
-        class="d-flex align-items-center justify-content-center w-100">
-        <div class="mx-auto w-50 px-4 py-5 my-5">
+        style="background-image: url('https://picsum.photos/1920');background-size:cover;background-position:center;background-repeat:no-repeat;"
+        class="d-flex align-items-center justify-content-center min-vh-100 min-vw-100">
+        <div class="mx-auto px-4 py-5 my-5">
             <h1 class="text-light display-5 fw-bolder text-center mb-5">
                 Find the
                 perfect freelance
@@ -80,9 +80,14 @@
             </div>
         </div>
     </div>
-    <div class="container py-5 mx-auto" id="gig-data">
+    <div class="container py-5 mx-auto">
         <h3 class="fw-bolder mb-3">All Gigs</h3>
-        @include('gigs.data')
+        <div class="text-center">
+            <div class="d-flex justify-content-center justify-content-md-start gap-3 flex-wrap align-items-center align-content-center"
+                id="gig-data">
+                @include('gigs.data')
+            </div>
+        </div>
     </div>
     <div class="ajax-load auto-load text-center" style="display: none">
         <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"

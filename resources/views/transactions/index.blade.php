@@ -1,6 +1,6 @@
-@extends('layouts.app',['title' => 'Transaction'])
+@extends('layouts.app', ['title' => 'Transaction'])
 @section('content')
-    <div class="container py-5">
+    <div class="container py-5 table-responsive">
         <table class="table table-striped table-hover table-borderless">
             <thead>
                 <tr>
@@ -19,8 +19,8 @@
                         <td>{{ ucfirst($transaction->type) }}</td>
                         <td>${{ $transaction->price }}</td>
                         <td>{{ $transaction->transaction_date->toDayDateTimeString() }}</td>
-                        <td><a href="{{ route('show-gig', $transaction->gig->id) }}"
-                                class="btn btn-info text-light">View</a></td>
+                        <td><a href="{{ route('show-gig', $transaction->gig->id) }}" class="btn btn-info text-light">View</a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

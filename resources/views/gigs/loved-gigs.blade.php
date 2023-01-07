@@ -1,11 +1,12 @@
-@extends('layouts.app',['title' => 'Loved Gigs'])
+@extends('layouts.app', ['title' => 'Loved Gigs'])
 @section('content')
     <div class="container">
         <div class="py-5">
             <h4 class="fw-bolder mb-4">Loved Gigs</h4>
-            <div class="row">
+            <div
+                class="d-flex justify-content-center justify-content-md-start gap-3 flex-wrap align-items-center align-content-center">
                 @forelse ($favourite_gigs as $favourite_gig)
-                    <div class="col-md-2 mb-4 mx-3">
+                    <div class="mb-4">
                         <div class="card" style="width : 15rem">
                             <a href="{{ route('show-gig', $favourite_gig->gig->id) }}"><img
                                     src="{{ asset('storage/gig-images/' . $favourite_gig->gig->gigImages->first()->image_name) }}"

@@ -1,13 +1,13 @@
-@extends('layouts.app',['title' => 'Search'])
+@extends('layouts.app', ['title' => 'Search'])
 @section('content')
     <div class="container py-5">
         <form class="mb-3">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-2 my-2">
                     <input type="text" class="form-control" name="title" placeholder="Search"
                         value="{{ request('title') }}">
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 my-2">
                     <select class="form-select" aria-label="Default select example" name="category_id">
                         <option selected>-- Category --</option>
                         @foreach ($categories as $category)
@@ -17,26 +17,27 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 my-2">
                     <input type="number" class="form-control" name="min_budget" placeholder="Min Budget..."
                         value="{{ request('min_budget') }}">
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 my-2">
                     <input type="number" class="form-control" name="max_budget" placeholder="Max Budget..."
                         value="{{ request('max_budget') }}">
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 my-2">
                     <input type="text" class="form-control" name="seller_name" placeholder="Seller Name..."
                         value="{{ request('seller_name') ?? old('seller_name') }}">
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 my-2">
                     <button type="submit" class="btn btn-primary form-control">Search</button>
                 </div>
             </div>
         </form>
-        <div class="row p-3">
+        <div
+            class="d-flex justify-content-center justify-content-md-start gap-3 flex-wrap align-items-center align-content-center p-3">
             @forelse ($gigs as $gig)
-                <div class="col-md-2 mb-4 mx-3">
+                <div class="mb-4">
                     <div class="card" style="width : 15rem">
                         <a href="{{ route('show-gig', $gig->id) }}"><img
                                 src="{{ asset('storage/gig-images/' . $gig->gigImages->first()->image_name) }}"

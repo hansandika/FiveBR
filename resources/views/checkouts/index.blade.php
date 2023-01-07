@@ -1,9 +1,9 @@
-@extends('layouts.app',['title' => 'Checkout'])
+@extends('layouts.app', ['title' => 'Checkout'])
 @section('content')
     <div class="container py-5">
-        <h3 class="fw-bolder">Gig Checkout</h3>
+        <h3 class="fw-bolder mb-3">Gig Checkout</h3>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 my-2">
                 <div class="card p-3">
                     <div class="row">
                         <div class="col-md-8">
@@ -17,8 +17,8 @@
                                     @else
                                         <p class="fs-3 p-0"><i class="fas fa-user-circle"></i></p>
                                     @endif
-                                    <p class="mx-2">{{ $gig->user->name }} | <i
-                                            class="fas fa-star text-warning"></i><span class="text-warning">
+                                    <p class="mx-2">{{ $gig->user->name }} | <i class="fas fa-star text-warning"></i><span
+                                            class="text-warning">
                                             {{ $avg_rate }}</span> ({{ $rating }})</p>
                                 </div>
                                 <p>{{ $gig->about }}</p>
@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 my-2">
                 <div class="card p-3">
                     <div class="card-body">
                         <h5 class="card-title fw-bolder">{{ ucfirst($type) }}</h5>

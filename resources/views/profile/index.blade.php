@@ -1,4 +1,4 @@
-@extends('layouts.app',['title' => $user->name])
+@extends('layouts.app', ['title' => $user->name])
 @section('content')
     <div class="container py-5">
         <div class="row">
@@ -33,13 +33,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 mt-3">
                 <div class="row mb-4">
                     <div class="col-md-6">
                         <h3 class="fw-bolder">{{ $user->name }}'s Gigs</h3>
                     </div>
                     <div class="col-md-6 text-end">
-                        <a href="{{ route('create-gig') }}" class="w-75 btn btn-info text-light">
+                        <a href="{{ route('create-gig') }}" class="w-100 btn btn-info text-light">
                             <i class="fas fa-plus"></i> Create Gig</a>
                     </div>
                 </div>
