@@ -1,4 +1,4 @@
-@extends('layouts.app',['title' => 'Edit Profile'])
+@extends('layouts.app', ['title' => 'Edit Profile'])
 @section('content')
     <div class="container py-5">
         <div class="row justify-content-center">
@@ -42,8 +42,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">Description</label>
-                        <textarea class="form-control @error('description')is-invalid @enderror" name="description"
-                            rows="7">{{ old('description') ?? $user->description }}</textarea>
+                        <textarea class="form-control @error('description')is-invalid @enderror" name="description" rows="7">{{ old('description') ?? $user->description }}</textarea>
                         @error('description')
                             <div class="invalid-feedback">
                                 {{ $message }}
