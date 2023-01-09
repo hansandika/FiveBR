@@ -14,7 +14,7 @@ class CreateFavouriteGigsTable extends Migration
     public function up()
     {
         Schema::create('favourite_gigs', function (Blueprint $table) {
-            $table->foreignId('gig_id')->constrained();
+            $table->foreignId('gig_id')->constrained()->onDelete('cascade');
             $table->foreignId('user_id')->constrained();
 
             $table->primary(['gig_id', 'user_id']);

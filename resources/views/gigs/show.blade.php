@@ -1,4 +1,4 @@
-@extends('layouts.app',['title' => $gig->title])
+@extends('layouts.app', ['title' => $gig->title])
 @section('content')
     <div class="container" style="position: relative">
         <div class="py-5">
@@ -9,7 +9,7 @@
                     <div class="d-flex mb-3 align-items-center">
                         @if ($gig->user->profile_image)
                             <img src="{{ asset('storage/profile-pictures/' . $gig->user->profile_image) }}"
-                                class="rounded-circle" style="width : 2rem;height : 2rem;object-fit: cover">
+                                class="rounded-circle object-fit-cover" style="width : 2rem;height : 2rem;">
                         @else
                             <p class="fs-3 p-0"><i class="fas fa-user-circle"></i></p>
                         @endif
@@ -75,8 +75,7 @@
                                 <div class="mb-3">
                                     <label for="description"
                                         class="form-label @error('description')is-invalid @enderror">Body</label>
-                                    <textarea class="form-control" name="description"
-                                        rows="3">{{ old('description') ?? '' }}</textarea>
+                                    <textarea class="form-control" name="description" rows="3">{{ old('description') ?? '' }}</textarea>
                                     @error('description')
                                         <div class="invalid-feedback">
                                             {{ $message }}
@@ -153,7 +152,8 @@
                                 @can('purchase', $gig)
                                     <a href="{{ route('show-checkout', [$gig->id, 'premium']) }}"
                                         class="btn btn-info mt-3 w-100 text-light">Continue
-                                        (${{ $gig->premium_price }})</a>
+                                        (${{ $gig->premium_price }})
+                                    </a>
                                 @endcan
                             @endauth
                         </div>
