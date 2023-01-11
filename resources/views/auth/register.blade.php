@@ -3,14 +3,15 @@
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-md-5">
-                <div class="card">
-                    <div class="card-body p-5">
+                <div class="card p-5">
+                    <div class="card-body">
                         <h2 class="card-title text-center fw-bolder mb-3">Register</h2>
                         <form action="{{ route('register') }}" method="POST">
                             @csrf
                             <div class="mb-4">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name">
+                                <input type="text" class="form-control @error('name') is-invalid @enderror"
+                                    name="name">
                                 @error('name')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -19,7 +20,8 @@
                             </div>
                             <div class="mb-4">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email">
+                                <input type="email" class="form-control @error('email') is-invalid @enderror"
+                                    name="email">
                                 @error('email')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -39,8 +41,9 @@
                             <button type="submit" class="btn btn-primary form-control">Register</button>
                         </form>
                     </div>
+                    <p class="text-center text-muted">Already have an account? <a href="{{ route('show-login') }}"
+                            class="fw-bold text-body"><u>Login here</u></a></p>
                 </div>
-
             </div>
         </div>
     </div>

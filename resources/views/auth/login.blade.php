@@ -1,10 +1,10 @@
-@extends('layouts.app',['title' => 'Login'])
+@extends('layouts.app', ['title' => 'Login'])
 @section('content')
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-md-5">
-                <div class="card">
-                    <div class="card-body p-5">
+                <div class="card p-5">
+                    <div class="card-body">
                         <h2 class="card-title text-center fw-bolder mb-3">Login</h2>
                         <form action="{{ route('login') }}" method="POST">
                             @csrf
@@ -23,11 +23,12 @@
                             <button type="submit" class="btn btn-primary form-control">Login</button>
                         </form>
                     </div>
+                    <div class="text-center">
+                        <p class="text-muted">Not a member? <a href="{{ route('show-register') }}"
+                                class="fw-bold text-body">Register</a></p>
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>
-
-
 @endsection
