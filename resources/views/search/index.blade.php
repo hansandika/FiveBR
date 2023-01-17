@@ -38,10 +38,10 @@
             class="d-flex justify-content-center justify-content-md-start gap-3 flex-wrap align-items-center align-content-center p-3">
             @forelse ($gigs as $gig)
                 <div class="mb-4">
-                    <div class="card" style="width : 15rem">
+                    <div class="card rounded" style="width : 18rem">
                         <a href="{{ route('show-gig', $gig->id) }}"><img
                                 src="{{ asset('storage/gig-images/' . $gig->gigImages->first()->image_name) }}"
-                                class="card-img-top w-100" style="height : 15rem;object-fit: cover"></a>
+                                class="card-img-top w-100" style="height : 18rem;object-fit: cover"></a>
                         <div class="card-body">
                             @if ($gig->user->profile_image)
                                 <div class="d-flex mb-3">

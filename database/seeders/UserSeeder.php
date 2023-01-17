@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
             'name' => 'william',
             'email' => 'william@mail.com',
             'password' => bcrypt('willliam02'),
-            'profile_image' =>  '71YE+qFDz5L.jpg',
+            'profile_image' =>  'wolf.jpg',
             'description' => $faker->paragraph(),
             'about' => $faker->sentence(),
             'join_date' => Carbon::now()

@@ -20,7 +20,7 @@ class GigController extends Controller
      */
     public function index(Request $request)
     {
-        $gigs = Gig::latest()->paginate(5);
+        $gigs = Gig::latest()->paginate(4);
         $categories = Category::get();
 
         if ($request->ajax()) {
@@ -58,12 +58,12 @@ class GigController extends Controller
             'about' => ['required', 'string'],
             'basic_price' => ['required', 'integer', 'lt:standard_price', 'lt:premium_price'],
             'basic_description' => ['required', 'string'],
-            'standard_price' => ['required', 'integer', 'gt:basic_price'],
+            'standard_price' => ['required', 'integer', 'gt:basic_price', 'lt:premium_price'],
             'standard_description' => ['required', 'string'],
-            'premium_price' => ['required', 'integer', 'gt:basic_price'],
+            'premium_price' => ['required', 'integer', 'gt:basic_price', 'gt:standard_price'],
             'premium_description' => ['required', 'string'],
             'images' => ['array'],
-            'images.*' => ['required', 'file', 'image']
+            'images.*' => ['required', 'file', 'image', 'max:1000']
         ]);
 
         $attr['user_id'] = auth()->user()->id;

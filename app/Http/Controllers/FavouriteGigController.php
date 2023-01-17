@@ -26,16 +26,6 @@ class FavouriteGigController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -47,40 +37,6 @@ class FavouriteGigController extends Controller
             'gig_id' => $gig->id,
             'user_id' => $user->id
         ]);
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\FavouriteGig  $favouriteGig
-     * @return \Illuminate\Http\Response
-     */
-    public function show(FavouriteGig $favouriteGig)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\FavouriteGig  $favouriteGig
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(FavouriteGig $favouriteGig)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\FavouriteGig  $favouriteGig
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, FavouriteGig $favouriteGig)
-    {
-        //
     }
 
     /**
