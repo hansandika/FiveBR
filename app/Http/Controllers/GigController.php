@@ -53,7 +53,7 @@ class GigController extends Controller
     public function store(Request $request)
     {
         $attr = $request->validate([
-            'title' => ['required', 'string'],
+            'title' => ['required', 'string', 'max:255'],
             'category' => ['required'],
             'about' => ['required', 'string'],
             'basic_price' => ['required', 'integer', 'lt:standard_price', 'lt:premium_price'],

@@ -18,7 +18,7 @@ class CreateGigsTable extends Migration
             $table->foreignId('user_id')->constrained();
             $table->foreignId('category_id')->constrained();
             $table->string('title');
-            $table->string('about');
+            $table->longText('about');
             $table->integer('basic_price');
             $table->longText('basic_description');
             $table->integer('standard_price');
